@@ -1,4 +1,4 @@
-i
+
 #include <stdlib.h>
 #include <sys/resource.h>
 #include "bircd.h"

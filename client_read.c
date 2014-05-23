@@ -13,7 +13,9 @@ void	client_read(t_env *e, int cs)
 	if (r <= 0)
 	{
 		close(cs);
-		clean_fd(&e->fds[cs]);
+		e->fds[cs].type = FD_CLIENT;
+		e->fds[cs].fct_read = client_read;
+		e->fds[cs].fct_write = client_write;
 		printf("client #%d gone away\n", cs);
 	}
 	else

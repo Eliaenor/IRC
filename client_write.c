@@ -4,4 +4,6 @@
 
 void	client_write(t_env *e, int cs)
 {
+	(void)e;
+	(void)cs;
 }
